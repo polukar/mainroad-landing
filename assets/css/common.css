@@ -469,6 +469,16 @@ h2 {
   vertical-align: middle;
 }
 
+.svgsprite._burger {
+  width: 31px;
+  height: 21px;
+}
+
+.svgsprite._close {
+  width: 47px;
+  height: 47px;
+}
+
 .svgsprite._contest {
   width: 30px;
   height: 30px;
@@ -712,9 +722,31 @@ h2 {
   margin-right: 0px;
 }
 
+.burger {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu .burger {
+  transform: translate(10px);
+}
+
 .main {
   padding: 334px 0 550px;
-  background: url(../img/main.svg) no-repeat left bottom/1950px auto;
+  background: url(../img/main.svg) no-repeat center bottom/1950px auto;
   min-height: 1234px;
 }
 
@@ -794,6 +826,167 @@ h2 {
   }
 }
 
+@media (max-width: 1400px) {
+  .main {
+    background: url(../img/main.svg) no-repeat center left -200px/1950px auto;
+  }
+
+  .organization__pic {
+    margin-right: 20px;
+  }
+
+  .organization__item {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contest__list {
+    margin-right: 0px;
+    justify-content: space-between;
+  }
+
+  .contest__item {
+    width: calc(50% - 20px);
+    margin-right: 0px;
+    margin-bottom: 36px;
+  }
+
+  .organization__list {
+    display: block;
+    font-size: 0px;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    overflow: auto;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .organization__pic {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .organization__item {
+    display: inline-block;
+    margin-right: 20px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    vertical-align: top;
+    width: 354px;
+  }
+
+  .organization__item:last-child {
+    margin-right: 0px;
+  }
+
+  .organization__text {
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 980px) {
+  .header {
+    padding-top: 34px;
+  }
+
+  .header .nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .main {
+    padding-top: 120px;
+    padding-bottom: 460px;
+    min-height: auto;
+    background: url(../img/main-mobile.svg) no-repeat center left/auto 100%;
+  }
+
+  .mobile-menu {
+    background: url(../img/menu-mobile.svg) no-repeat top left -160px/auto 1000px;
+    background-color: #fff;
+    padding-top: 27px;
+  }
+
+  .mobile-menu .nav {
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 128px;
+    max-width: 262px;
+    margin: 0 auto;
+  }
+
+  .mobile-menu .nav__link {
+    margin-right: 0px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-bottom: 36px;
+    height: 56px;
+    text-align: left;
+    color: #fff;
+  }
+
+  .socials__link {
+    margin-right: 11px;
+  }
+
+  .socials__link svg.svgsprite {
+    width: 32px;
+    height: 32px;
+  }
+
+  h1 {
+    font-size: 38px;
+    line-height: 46px;
+    max-width: 300px;
+    margin-bottom: 31px;
+  }
+
+  .main p {
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 300px;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 46px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer .nav {
+    width: 100%;
+    order: -1;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer .nav__link {
+    margin-right: 0px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-bottom: 53px;
+  }
+
+  .organization {
+    padding-bottom: 50px;
+    background: url(../img/organization-bg-mobile.svg) no-repeat left -430px bottom/2035px auto;
+  }
+}
+
 @media (max-width: 768px) {
   .btn {
     font-size: 18px;
@@ -802,6 +995,39 @@ h2 {
 
   .btn span {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer .socials {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .organization__item {
+    width: 300px;
+  }
+
+  .contest__pic {
+    margin-bottom: 24px;
+  }
+
+  .contest__pic img {
+    width: 226px;
+  }
+
+  .contest__text {
+    font-size: 24px;
+  }
+
+  .contest__item {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 36px;
+  }
+
+  .main {
+    background: url(../img/main-mobile.svg) no-repeat center left -150px/auto 100%;
   }
 }
 

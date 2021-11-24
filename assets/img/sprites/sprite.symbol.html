@@ -19,6 +19,8 @@ They might well be outsourced to an external stylesheet of course.
 -->
 
 <style type="text/css">
+	.svg-burger-dims { width: 31px; height: 21px; }
+	.svg-close-dims { width: 47px; height: 47px; }
 	.svg-contest-dims { width: 30px; height: 30px; }
 	.svg-contest-white-dims { width: 30px; height: 30px; }
 	.svg-fb-dims { width: 48px; height: 48px; }
@@ -51,6 +53,8 @@ for further details on how to create this embeddable sprite variant.
 -->
 
 <svg width="0" height="0" style="position:absolute">
+		<symbol fill="none" viewBox="0 0 31 21" id="burger" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" stroke-width="3" d="M0 1.5h31M0 10.5h31M0 19.5h31"/></symbol>
+		<symbol fill="none" viewBox="0 0 47 47" id="close" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" stroke-width="3" d="M11.832 35.167l23.334-23.334M11.832 11.833l23.335 23.334"/></symbol>
 		<symbol fill="none" viewBox="0 0 30 30" id="contest" xmlns="http://www.w3.org/2000/svg"><path d="M7.725 28.125a1.557 1.557 0 01-1.529-1.875l1.247-7.294-5.297-5.146a1.557 1.557 0 01.863-2.654l7.303-1.059 3.272-6.638a1.557 1.557 0 012.813 0l3.29 6.638 7.322 1.069a1.557 1.557 0 01.863 2.653l-5.297 5.165 1.228 7.266a1.556 1.556 0 01-2.24 1.65L15 24.46 8.437 27.9c-.215.132-.46.21-.712.225zM3.928 12.92l4.95 4.828a1.546 1.546 0 01.45 1.378l-1.172 6.806 6.122-3.215a1.557 1.557 0 011.444 0l6.121 3.215-1.171-6.815a1.547 1.547 0 01.45-1.378l4.95-4.829-6.844-.993a1.556 1.556 0 01-1.172-.853L15 4.875l-3.057 6.197a1.556 1.556 0 01-1.171.853l-6.844.994z" fill="#F3AC23"/></symbol>
 		<symbol fill="none" viewBox="0 0 30 30" id="contest-white" xmlns="http://www.w3.org/2000/svg"><path d="M7.725 28.125a1.557 1.557 0 01-1.529-1.875l1.247-7.294-5.297-5.146a1.557 1.557 0 01.863-2.654l7.303-1.059 3.272-6.638a1.557 1.557 0 012.813 0l3.29 6.638 7.322 1.069a1.557 1.557 0 01.863 2.653l-5.297 5.165 1.228 7.266a1.556 1.556 0 01-2.24 1.65L15 24.46 8.437 27.9c-.215.132-.46.21-.712.225zM3.928 12.92l4.95 4.828a1.546 1.546 0 01.45 1.378l-1.172 6.806 6.122-3.215a1.557 1.557 0 011.444 0l6.121 3.215-1.171-6.815a1.547 1.547 0 01.45-1.378l4.95-4.829-6.844-.993a1.556 1.556 0 01-1.172-.853L15 4.875l-3.057 6.197a1.556 1.556 0 01-1.171.853l-6.844.994z" fill="#fff"/></symbol>
 		<symbol fill="none" viewBox="0 0 48 48" id="fb" xmlns="http://www.w3.org/2000/svg"><path d="M24 .1C10.745.1 0 10.845 0 24.1c0 11.888 8.653 21.733 19.997 23.64V29.107h-5.79v-6.705h5.79v-4.944c0-5.737 3.504-8.863 8.622-8.863 2.452 0 4.558.183 5.17.263v5.996l-3.55.002c-2.783 0-3.32 1.322-3.32 3.263v4.28h6.64l-.865 6.705h-5.775V47.9C38.794 46.455 48 36.359 48 24.093 48 10.845 37.255.1 24 .1z" fill="#fff"/></symbol>
@@ -90,6 +94,28 @@ embedded above. They may be styled via CSS.
 			<h3>A) Inline SVG with embedded sprite</h3>
 			<ul>
 
+				<li title="burger">
+					<div class="icon-box">
+						
+						<!-- burger -->
+						<svg class="svg-burger-dims">
+							<use xlink:href="#burger"></use>
+						</svg>
+						
+					</div>
+					<h2>burger</h2>
+				</li>
+				<li title="close">
+					<div class="icon-box">
+						
+						<!-- close -->
+						<svg class="svg-close-dims">
+							<use xlink:href="#close"></use>
+						</svg>
+						
+					</div>
+					<h2>close</h2>
+				</li>
 				<li title="contest">
 					<div class="icon-box">
 						
@@ -221,6 +247,28 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
 			<ul>
 				
+				<li title="burger">
+					<div class="icon-box">
+						
+						<!-- burger -->
+						<svg class="svg-burger-dims">
+							<use xlink:href="svgsprites.svg#burger"></use>
+						</svg>
+						
+					</div>
+					<h2>burger</h2>
+				</li>
+				<li title="close">
+					<div class="icon-box">
+						
+						<!-- close -->
+						<svg class="svg-close-dims">
+							<use xlink:href="svgsprites.svg#close"></use>
+						</svg>
+						
+					</div>
+					<h2>close</h2>
+				</li>
 				<li title="contest">
 					<div class="icon-box">
 						
@@ -339,7 +387,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Wed, 24 Nov 2021 07:41:19 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Wed, 24 Nov 2021 10:30:24 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>
